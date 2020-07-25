@@ -1,0 +1,4 @@
+---
+# tasks file for redis-ansible-molecule
+- name: "Print the Linux distribution and version"
+  debug: msg="{{ ansible_distribution }} {{ ansible_distribution_version }}"
