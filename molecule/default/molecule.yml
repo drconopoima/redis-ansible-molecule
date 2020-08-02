@@ -25,6 +25,12 @@ platforms:
   - name: debian10
     image: debian:10
     pre_build_image: true
+  - name: fedora31
+    image: fedora:31
+    pre_build_image: true
+  - name: fedora32
+    image: fedora:32
+    pre_build_image: true
 provisioner:
   name: ansible
 verifier:
