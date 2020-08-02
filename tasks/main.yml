@@ -1,4 +1,38 @@
 ---
-# tasks file for redis-ansible-molecule
-- name: "Print the Linux distribution and version"
-  debug: msg="{{ ansible_distribution }} {{ ansible_distribution_version }}"
+
+- name: "Install Redis on RedHat family distributions"
+  block:
+    - name: "Add EPEL repository to Yum"
+      yum:
+        name: "epel-release"
+        state: "present"
+        update_cache: true
+    - name: "Install Redis package"
+      yum:
+        name: "redis"
+        state: "present"
+        update_cache: true
+  when: (ansible_distribution == "CentOS") or (ansible_distribution == "Red Hat Enterprise Linux")
+
+- name: "Install Redis on Debian Family distributions"
+  block:
+    - name: "Add package redis via APT"
+      apt:
+        name: "redis-server"
+        state: "present"
+        update_cache: true
+    - name: disable ipv6 binding (Debian)
+      lineinfile:
+        path: /etc/redis/redis.conf
+        regex: '^bind'
+        line: bind 127.0.0.1
+  when: (ansible_distribution == "Ubuntu") or (ansible_distribution == "Debian")
+  
+- name: "Install Redis on Fedora distributions"
+  block:
+    - name: "Add package redis via DNF"
+      dnf:
+        name: "redis"
+        state: "present"
+        update_cache: true
+  when: (ansible_distribution == "Fedora")
