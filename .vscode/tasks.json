@@ -9,6 +9,11 @@
             "command": "molecule converge"
         },
         {
+            "label": "Destroy",
+            "type": "shell",
+            "command": "molecule destroy"
+        },
+        {
             "label": "Verify",
             "type": "shell",
             "command": "molecule verify"
@@ -34,9 +39,9 @@
                 "runOn": "folderOpen"
             },
             "dependsOn": [
-                "destroy",
+                "Destroy",
                 "Converge",
-                "verify",
+                "Verify",
             ],
             "group": {
                 "kind": "test",
