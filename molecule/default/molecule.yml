@@ -31,7 +31,14 @@ platforms:
   - name: fedora32
     image: fedora:32
     pre_build_image: true
+  - name: archlinux
+    image: archlinux:20200705
+    pre_build_image: true
+  - name: opensuseleap15
+    image: opensuse/leap:15.2
+    pre_build_image: true
 provisioner:
   name: ansible
+  log: true
 verifier:
   name: ansible
