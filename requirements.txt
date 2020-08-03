@@ -11,6 +11,10 @@ arrow==0.15.8 \
     --hash=sha256:271b8e05174d48e50324ed0dc5d74796c839c7e579a4f21cf1a7394665f9e94f \
     --hash=sha256:edc31dc051db12c95da9bac0271cd1027b8e36912daf6d4580af53b23e62721a \
     # via jinja2-time
+attrs==19.3.0 \
+    --hash=sha256:08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c \
+    --hash=sha256:f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72 \
+    # via pytest
 bcrypt==3.1.7 \
     --hash=sha256:0258f143f3de96b7c14f762c770f5fc56ccd72f8a1857a451c1cd9a655d9ac89 \
     --hash=sha256:0b0069c752ec14172c5f78208f1863d7ad6755a6fae6fe76ec2c80d13be41e42 \
@@ -132,6 +136,10 @@ idna==2.10 \
     --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6 \
     --hash=sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0 \
     # via requests
+iniconfig==1.0.1 \
+    --hash=sha256:80cf40c597eb564e86346103f609d74efce0f6b4d4f30ec8ce9e2c26411ba437 \
+    --hash=sha256:e5f92f89355a67de0595932a6c6c02ab4afddc6fcdc0bfc5becd0d60884d3f69 \
+    # via pytest
 jinja2-time==0.2.0 \
     --hash=sha256:d14eaa4d315e7688daa4969f616f226614350c48730bfa1692d2caebd8c90d40 \
     --hash=sha256:d3eab6605e3ec8b7a0863df09cc1d23714908fa61aa6986a845c20ba488b4efa \
@@ -183,6 +191,14 @@ monotonic==1.5 \
     --hash=sha256:23953d55076df038541e648a53676fb24980f7a1be290cdda21300b3bc21dfb0 \
     --hash=sha256:552a91f381532e33cbd07c6a2655a21908088962bb8fa7239ecbcc6ad1140cc7 \
     # via fasteners
+more-itertools==8.4.0 \
+    --hash=sha256:68c70cc7167bdf5c7c9d8f6954a7837089c6a36bf565383919bb595efb8a17e5 \
+    --hash=sha256:b78134b2063dd214000685165d81c154522c3ee0a1c0d4d113c80361c234c5a2 \
+    # via pytest
+packaging==20.4 \
+    --hash=sha256:4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8 \
+    --hash=sha256:998416ba6962ae7fbd6596850b80e17859a5753ba17c32284f67bfff33784181 \
+    # via pytest
 paramiko==2.7.1 \
     --hash=sha256:920492895db8013f6cc0179293147f830b8c7b21fdfc839b6bad760c27459d9f \
     --hash=sha256:9c980875fa4d2cb751604664e9a2d0f69096643f5be4db1b99599fe114a97b2f \
@@ -198,7 +214,7 @@ pexpect==4.8.0 \
 pluggy==0.13.1 \
     --hash=sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0 \
     --hash=sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d \
-    # via molecule
+    # via molecule, pytest
 poyo==0.5.0 \
     --hash=sha256:3e2ca8e33fdc3c411cd101ca395668395dd5dc7ac775b8e809e3def9f9fe041a \
     --hash=sha256:e26956aa780c45f011ca9886f044590e2d8fd8b61db7b1c1cf4e0869f48ed4dd \
@@ -207,6 +223,10 @@ ptyprocess==0.6.0 \
     --hash=sha256:923f299cc5ad920c68f2bc0bc98b75b9f838b93b599941a6b63ddbc2476394c0 \
     --hash=sha256:d7cc528d76e76342423ca640335bd3633420dc1366f258cb31d05e865ef5ca1f \
     # via pexpect
+py==1.9.0 \
+    --hash=sha256:366389d1db726cd2fcfc79732e75410e5fe4d31db13692115529d34069a043c2 \
+    --hash=sha256:9ca6883ce56b4e8da7e79ac18787889fa5206c79dcc67fb065376cd2fe03f342 \
+    # via pytest
 pycparser==2.20 \
     --hash=sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0 \
     --hash=sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705 \
@@ -229,6 +249,14 @@ pynacl==1.4.0 \
     --hash=sha256:ea6841bc3a76fa4942ce00f3bda7d436fda21e2d91602b9e21b7ca9ecab8f3ff \
     --hash=sha256:f8851ab9041756003119368c1e6cd0b9c631f46d686b3904b18c0139f4419f80 \
     # via paramiko
+pyparsing==2.4.7 \
+    --hash=sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1 \
+    --hash=sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b \
+    # via packaging
+pytest==6.0.1 \
+    --hash=sha256:85228d75db9f45e06e57ef9bf4429267f81ac7c0d742cc9ed63d09886a9fe6f4 \
+    --hash=sha256:8b6007800c53fdacd5a5c192203f4e531eb2a1540ad9c752e052ec0f7143dbad \
+    # via testinfra
 python-dateutil==2.8.1 \
     --hash=sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c \
     --hash=sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a \
@@ -271,15 +299,23 @@ shellingham==1.3.2 \
 six==1.15.0 \
     --hash=sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259 \
     --hash=sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced \
-    # via bcrypt, click-completion, cookiecutter, cryptography, docker, fasteners, pynacl, python-dateutil, websocket-client
+    # via bcrypt, click-completion, cookiecutter, cryptography, docker, fasteners, packaging, pynacl, python-dateutil, websocket-client
 tabulate==0.8.7 \
     --hash=sha256:ac64cb76d53b1231d364babcd72abbb16855adac7de6665122f97b593f1eb2ba \
     --hash=sha256:db2723a20d04bcda8522165c73eea7c300eda74e0ce852d9022e0159d7895007 \
     # via molecule
+testinfra==5.2.2 \
+    --hash=sha256:737c4e2fb7e8099639c6334dbc6ca1a9d926258a1a4cda3e511ce4d02d45454c \
+    --hash=sha256:8972f625a60af85a49f05f3ce23fa6e518f7e49d319819ace351cc4c6288410c \
+    # via -r requirements.in
 text-unidecode==1.3 \
     --hash=sha256:1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8 \
     --hash=sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93 \
     # via python-slugify
+toml==0.10.1 \
+    --hash=sha256:926b612be1e5ce0634a2ca03470f95169cf16f939018233a670519cb4ac58b0f \
+    --hash=sha256:bda89d5935c2eac546d648028b9901107a595863cb36bae0c73ac804a9b4ce88 \
+    # via pytest
 tree-format==0.1.2 \
     --hash=sha256:a538523aa78ae7a4b10003b04f3e1b37708e0e089d99c9d3b9e1c71384c9a7f9 \
     --hash=sha256:b5056228dbedde1fb81b79f71fb0c23c98e9d365230df9b29af76e8d8003de11 \
@@ -298,7 +334,7 @@ yamllint==1.24.2 \
     # via molecule
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==49.2.0 \
-    --hash=sha256:272c7f48f5cddc5af5901f4265274c421c7eede5c8bc454ac2903d3f8fc365e9 \
-    --hash=sha256:afe9e81fee0270d3f60d52608549cc8ec4c46dada8c95640c1a00160f577acf2 \
+setuptools==49.2.1 \
+    --hash=sha256:1a4299a49e3dfe2d79d774ec70746a97d54feacb283e8b689a2bef3eb62e0fe8 \
+    --hash=sha256:88094d17c8d273390659a72e9d93374cd7bfd188c12bf2747b306e2bed48df18 \
     # via cerberus, selinux
