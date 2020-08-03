@@ -1,13 +1,13 @@
 ---
 
-- name: "Install Redis on RedHat family distributions"
+- name: "Install Redis on CentOS/RedHat distributions"
   block:
     - name: "Add EPEL repository to Yum"
       yum:
         name: "epel-release"
         state: "present"
         update_cache: true
-    - name: "Install Redis package"
+    - name: "Add package Redis via Yum"
       yum:
         name: "redis"
         state: "present"
@@ -16,7 +16,7 @@
 
 - name: "Install Redis on Debian Family distributions"
   block:
-    - name: "Add package redis via APT"
+    - name: "Add package Redis via APT"
       apt:
         name: "redis-server"
         state: "present"
@@ -26,7 +26,7 @@
         path: /etc/redis/redis.conf
         regex: '^bind'
         line: bind 127.0.0.1
-  when: (ansible_distribution == "Ubuntu") or (ansible_distribution == "Debian")
+  when: (ansible_os_family == "Debian")
   
 - name: "Install Redis on Fedora distributions"
   block:
@@ -36,3 +36,21 @@
         state: "present"
         update_cache: true
   when: (ansible_distribution == "Fedora")
+
+- name: "Install Redis on Arch Linux family distributions"
+  block:
+    - name: "Add package redis via Pacman"
+      pacman:
+        name: "redis"
+        state: "present"
+        update_cache: true
+  when: (ansible_os_family == "Archlinux")
+
+- name: "Install Redis on Suse family distributions"
+  block:
+    - name: "Add package redis via Zypper"
+      zypper:
+        name: "redis"
+        state: "present"
+        update_cache: true
+  when: (ansible_os_family == "Suse")

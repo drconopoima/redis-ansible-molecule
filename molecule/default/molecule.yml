@@ -32,10 +32,13 @@ platforms:
     image: fedora:32
     pre_build_image: true
   - name: archlinux
-    image: archlinux:20200705
+    image: archlinux:latest
     pre_build_image: true
   - name: opensuseleap15
     image: opensuse/leap:15.2
+    pre_build_image: true
+  - name: opensusetumbleweed
+    image: opensuse/tumbleweed:latest
     pre_build_image: true
 provisioner:
   name: ansible

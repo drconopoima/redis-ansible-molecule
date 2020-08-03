@@ -8,9 +8,9 @@ PACMAN_PACKAGE_NAME='python3';
 ZYPPER_PACKAGE_NAME='python3';
 
 # Debian/Ubuntu
-if command -v apt &>/dev/null; then
-  apt update && \
-  apt install -y "${APT_PACKAGE_NAME}" && \
+if command -v apt-get &>/dev/null; then
+  apt-get update && \
+  apt-get install -y "${APT_PACKAGE_NAME}" && \
   (ln -s -T /usr/bin/${APT_PACKAGE_NAME} /usr/bin/python || true ) && \
   exit 0;
 fi
